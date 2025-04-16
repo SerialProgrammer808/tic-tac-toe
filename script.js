@@ -20,7 +20,7 @@ const gameBoard = (function gameBoard(){
         //check crossed combinations
         if ((board[0] !== "*" &&board[0] === board[4] && board[4] === board[8]) || 
         (board[2] !== "*" && board[2] === board[4] && board[4] === board[6])) {
-            alert(`${board[counter]} wins!`)
+            alert(`${board[4]} wins!`)
             return true;
         }
     }
