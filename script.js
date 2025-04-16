@@ -3,7 +3,7 @@ const gameBoard = (function gameBoard(){
     let board = ["*", "*", "*", "*", "*", "*", "*", "*", "*"];
     let isWinner = (board) => {
         //check horizontal combinations
-        for (let counter = 0; counter < 6; counter += 3) {
+        for (let counter = 0; counter <= 6; counter += 3) {
             if (board[counter] !== "*" && board[counter] === board[counter+1] && board[counter+1] === board[counter+2]) {
                 alert(`${board[counter]} wins!`)
                 return true;
@@ -12,6 +12,7 @@ const gameBoard = (function gameBoard(){
         //check vertical combinations
         for (let counter = 0; counter < 3; counter++) {
             if (board[counter] !== "*" && board[counter] === board[counter+3] && board[counter+3] === board[counter+6]) {
+                alert(`${board[counter]} wins!`)
                 return true;
             }
         }
@@ -19,6 +20,7 @@ const gameBoard = (function gameBoard(){
         //check crossed combinations
         if ((board[0] !== "*" &&board[0] === board[4] && board[4] === board[8]) || 
         (board[2] !== "*" && board[2] === board[4] && board[4] === board[6])) {
+            alert(`${board[counter]} wins!`)
             return true;
         }
     }
